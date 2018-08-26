@@ -1,12 +1,8 @@
-name := "scala"
+name := "spark-scala-sbt"
 
-version := "0.98.5"
+version := "1.0"
 
-scalaVersion := "2.10.2"
+scalaVersion := "2.11.8"
 
-crossScalaVersions := Seq("2.10.2", "2.10.3", "2.11.8")
-
-libraryDependencies ++= Seq(
-  "junit"          % "junit"           % "4.5",
-  "org.scalatest"  %% "scalatest"      % "3.0.1"
-)
+// http://mvnrepository.com/artifact/org.apache.spark/spark-core_2.11
+libraryDependencies += "org.apache.spark" % "spark-core_2.11" % "1.6.1"
