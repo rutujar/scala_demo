@@ -1,14 +1,13 @@
-sudo: false
-
 language: scala
 
-branches:
-  only:
-    - develop
+notifications:
+  email: false
 
-scala: 2.11.8
+scala:
+  - 2.10.6
 
-jdk: oraclejdk8
+install:
+  - sbt package
 
-script:
-  - sbt compile run
+after_success:
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
