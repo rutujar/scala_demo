@@ -1,0 +1,3 @@
+def sayhi(){
+println("hi")
+}
